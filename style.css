@@ -1,0 +1,8 @@
+* {
+border: 1px red solid;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
