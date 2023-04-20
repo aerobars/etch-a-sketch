@@ -5,8 +5,10 @@ border: 1px white solid;
 #container {
   display: flex;
   flex-direction: column;
+  height: 1000px;
+  width: 1000px;
 }
 
-.grid:hover {
+.moused {
   background-color: rgb(110, 105, 5);
 }
