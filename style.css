@@ -1,8 +1,12 @@
-* {
-border: 1px red solid;
-}
+/* {
+border: 1px white solid; 
+} */
 
 #container {
   display: flex;
   flex-direction: column;
+}
+
+.grid:hover {
+  background-color: rgb(110, 105, 5);
 }
