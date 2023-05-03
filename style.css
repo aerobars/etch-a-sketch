@@ -5,8 +5,9 @@ border: 1px white solid;
 #container {
   display: flex;
   flex-direction: column;
-  height: 1000px;
-  width: 1000px;
+  height: 500px;
+  width: 500px;
+  border: 1px white solid;
 }
 
 .moused {
