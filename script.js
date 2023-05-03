@@ -9,13 +9,13 @@ let y = 100;
   for (let i = 0; i < y; i++) {
     let yAxis = document.createElement('div');
     //yAxis.classList.add('grid');
-    yAxis.setAttribute('style', 'width: 1000px; display: flex; flex-direction: row;');
-    yAxis.style.height = y / 500 + 'px';
+    yAxis.setAttribute('style', 'width: 500px; display: flex; flex-direction: row;');
+    yAxis.style.height = 500 / y + 'px';
     for (let j = 0; j < x; j++) {
       let xAxis = document.createElement('div');
       xAxis.classList.add('grid');
-      xAxis.style.height = y / 500 + 'px';
-      xAxis.style.width = x / 500 + 'px';
+      xAxis.style.height = 500 / y + 'px';
+      xAxis.style.width = 500 / x + 'px';
       yAxis.appendChild(xAxis);
     }
     fragment.appendChild(yAxis);
