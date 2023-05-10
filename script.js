@@ -1,8 +1,9 @@
 //set global variables
 const container = document.querySelector('#container');
 let size = 100;
+generateGrid();
 
-//function generateGrid() {
+function generateGrid() {
   let fragment = new DocumentFragment()
 
   for (let i = 0; i < size; i++) {
@@ -21,14 +22,17 @@ let size = 100;
   }
 
   container.appendChild(fragment);
-//}
+  mouseHover();
+}
 
+function mouseHover() {
 const hover = document.querySelectorAll('.x-axis');
 hover.forEach((cell) => {
   cell.addEventListener('mouseover', () => {
     cell.classList.toggle ('moused');
-  })
+  });
 });
+}
 
 function gridClear() {
   const clearGrid = document.querySelectorAll('.grid');
@@ -47,6 +51,9 @@ resize.addEventListener('click', () => {
   gridClear();
   size = window.prompt("Please enter grid dimension");
   if (Number(size) > 100 || size == NaN) {
-    size = 100
+    size = 100;
+  } else if (Number(size) < 0) {
+    size = 10;
   }
+  generateGrid();
 })
