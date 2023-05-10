@@ -36,7 +36,6 @@ hover.forEach((cell) => {
 
 function gridClear() {
   const clearGrid = document.querySelectorAll('.grid');
-  console.log('test')
   clearGrid.forEach((cell) => {
     while (cell.firstChild) {
       cell.removeChild(cell.lastChild)
