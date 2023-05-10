@@ -30,20 +30,23 @@ hover.forEach((cell) => {
   })
 });
 
-const resize = document.getElementById('resize');
-resize.addEventListener('click', () => {
-  //size = window.prompt("Please enter grid dimension");
-  gridClear
-  console.log('test');
-})
-
 function gridClear() {
-  const clearCell = document.querySelectorAll('.x-axis');
   const clearGrid = document.querySelectorAll('.grid');
-  clearCell.forEach((cell) => {
-    clearGrid.removeChild(cell);
-  })
+  console.log('test')
   clearGrid.forEach((cell) => {
+    while (cell.firstChild) {
+      cell.removeChild(cell.lastChild)
+    }
     container.removeChild(cell);
+    
   })
 }
+
+const resize = document.getElementById('resize');
+resize.addEventListener('click', () => {
+  gridClear();
+  size = window.prompt("Please enter grid dimension");
+  if (Number(size) > 100 || size == NaN) {
+    size = 100
+  }
+})
